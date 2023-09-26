@@ -1,0 +1,39 @@
+﻿namespace CTBS.API.Core.Commands;
+
+
+public interface ICommandHandler<in T>
+{
+    ValueTask Handle(T command, CancellationToken token);
+}
+
+public delegate ValueTask CommandHandler<in T>(T query, CancellationToken ct);
+
+public static class CommandHandlerConfiguration
+{
+    public static IServiceCollection AddCommandHandler<T, TCommandHandler>(
+        this IServiceCollection services,
+        Func<IServiceProvider, TCommandHandler>? configure = null
+    ) where TCommandHandler : class, ICommandHandler<T>
+    {
+        if (configure == null)
+        {
+            services.AddTransient<TCommandHandler, TCommandHandler>();
+            services.AddTransient<ICommandHandler<T>, TCommandHandler>();
+        }
+        else
+        {
+            services.AddTransient<TCommandHandler, TCommandHandler>(configure);
+            services.AddTransient<ICommandHandler<T>, TCommandHandler>(configure);
+        }
+
+        services
+            .AddTransient<Func<T, CancellationToken, ValueTask>>(
+                sp => sp.GetRequiredService<ICommandHandler<T>>().Handle
+            )
+            .AddTransient<CommandHandler<T>>(
+                sp => sp.GetRequiredService<ICommandHandler<T>>().Handle
+            );
+
+        return services;
+    }
+}
