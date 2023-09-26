@@ -29,3 +29,7 @@ if (app.Environment.IsDevelopment())
 app.MapMoviesEndpoints();
 
 app.Run();
+
+public partial class Program
+{
+}

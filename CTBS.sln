@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTBS.API", "CTBS.API\CTBS.API.csproj", "{99874AC6-BFAB-4041-8543-64A8EA01CE65}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "CTBS.Tests", "CTBS.Tests\CTBS.Tests.fsproj", "{88B85047-2A02-41D1-BFF7-AFE3EECDC161}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTBS.Tests", "CTBS.Tests\CTBS.Tests.csproj", "{A5481223-39D2-4639-BFA1-5338D75F0F32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,9 +14,9 @@ Global
 		{99874AC6-BFAB-4041-8543-64A8EA01CE65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99874AC6-BFAB-4041-8543-64A8EA01CE65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99874AC6-BFAB-4041-8543-64A8EA01CE65}.Release|Any CPU.Build.0 = Release|Any CPU
-		{88B85047-2A02-41D1-BFF7-AFE3EECDC161}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{88B85047-2A02-41D1-BFF7-AFE3EECDC161}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{88B85047-2A02-41D1-BFF7-AFE3EECDC161}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{88B85047-2A02-41D1-BFF7-AFE3EECDC161}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5481223-39D2-4639-BFA1-5338D75F0F32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5481223-39D2-4639-BFA1-5338D75F0F32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5481223-39D2-4639-BFA1-5338D75F0F32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5481223-39D2-4639-BFA1-5338D75F0F32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
